@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:nether_star",
+      "count": 1
+    },
+    "title": {
+      "text": "④ DAG · D (双父汇合)"
+    },
+    "description": {
+      "text": "主父 = B，multi_parents = [C] -> D 上应有两条上游连线"
+    },
+    "frame": "challenge",
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "criteria": {
+    "manual": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "katest:dag/b",
+  "multi_parents": [
+    "katest:dag/c"
+  ]
+}

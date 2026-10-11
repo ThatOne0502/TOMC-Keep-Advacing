@@ -1,0 +1,131 @@
+plugins {
+    id 'net.fabricmc.fabric-loom-remap' version "${loom_version}"
+    id 'maven-publish'
+}
+
+// 版本钉选全部来自本项目的 gradle.properties（本格可独立构建）。
+def modId = project.property('mod_id')
+def modName = project.property('mod_name')
+def mcVersion = project.property('minecraft_version')
+def loaderVersion = project.property('loader_version')
+def fabricApiVersion = project.property('fabric_api_version')
+def javaVersion = project.property('java_version').toInteger()
+
+// ── 产物命名（用户 m00942 规定）─────────────────────────────────────────────
+// tomc-<modid>-<主版本>.<次版本>.<修订号>.<构建次数>-<平台>+mc<mc版本号>.jar
+//   ⇒ tomc-keepadvancing-0.1.0.0-fabric+mc1.21.11.jar
+// 前 3 段来自 gradle.properties 的 mod_version；第 4 段"构建次数"存在本目录的
+// build-number.txt，每次 jar 真正产出后 +1（--dry-run 不消耗；见下面 jar 任务的注释）。
+// 断言编号、不写回：gradlew build -PbuildNumber=7
+def platform = 'fabric'
+def baseVersion = project.property('mod_version')
+def buildCounterFile = file('build-number.txt')
+// 计数器文件可能缺失（首次构建、clone 后未带过来），也可能是空文件或半截内容
+// （例如构建过程中断电/蓝屏，实测出现过 0 字节）。这些情况一律当作 0，
+// 绝不让它把整个构建带崩 —— 用 Groovy 的 String.isInteger() 做一次安全判定。
+def counterText = buildCounterFile.exists() ? buildCounterFile.text.trim() : ''
+def storedBuildNumber = counterText.isInteger() ? counterText.toInteger() : 0
+if (buildCounterFile.exists() && !counterText.isInteger()) {
+    logger.warn("build-number.txt 内容不是整数（'{}'），本次按 0 处理。", counterText)
+}
+def buildNumber = project.hasProperty('buildNumber')
+        ? project.property('buildNumber').toString().trim().toInteger()
+        : storedBuildNumber
+
+group = project.property('group')
+version = "${baseVersion}.${buildNumber}-${platform}+mc${mcVersion}"
+
+base {
+    // 档案基名带 tomc- 前缀；版本号（含 -<平台>+mc<版本> 后缀）由上面的 version 提供，
+    // 这里只给基名，避免 Gradle 再追加一次 -<version>。
+    archivesName = "tomc-${modId}"
+}
+
+// 构建次数自增：只在 jar 真的产出之后写回，所以 dry-run 不会消耗编号。
+// inputs.property('buildNumber') 让"编号变了"成为 jar 的一个输入 ⇒ 编号一变 jar 必然重跑，
+// 于是 build/libs 里永远躺着与当前版本号同名的那份 jar，不会出现"gradle 说 0.1.0.3、
+// 目录里还是 0.1.0.2"的错位。doFirst 顺手清掉上一轮的产物，免得越攒越多分不清。
+tasks.named('jar') {
+    inputs.property('buildNumber', buildNumber)
+    doFirst {
+        // 连 -sources.jar 一起清。sourcesJar / remapSourcesJar 都排在 jar 之后
+        // （:jar → :sourcesJar → :remapSourcesJar），不会被误删；反过来若排除它们，
+        // build/libs 里会一轮一轮攒下一堆旧编号的 sources jar。
+        [layout.buildDirectory.dir('libs'), layout.buildDirectory.dir('devlibs')].each { dir ->
+            delete fileTree(dir) { include 'tomc-*.jar' }
+        }
+    }
+    doLast {
+        if (!project.hasProperty('buildNumber')) {
+            buildCounterFile.text = (buildNumber + 1).toString()
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven { url = 'https://maven.fabricmc.net/' }
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${mcVersion}"
+    // 官方 Mojang 映射（mojmap）：Fabric 全用 mojmap，不用 yarn。
+    // 注意 mojmap 与社区教程的 Yarn 名不同（BuiltInRegistries/Item.Properties/CommandSourceStack…），勿混用。
+    mappings loom.officialMojangMappings()
+    modImplementation "net.fabricmc:fabric-loader:${loaderVersion}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${fabricApiVersion}"
+
+    // 可选：把 BetterAdvancements 的 jar 丢进 libs/ 就能在开发环境里真跑一遍 BA 渲染路径。
+    // 文件不存在时这一条完全不生效（不报错、也不进产物）—— 默认交付物里没有任何第三方 jar。
+    def baDevJar = file('libs/BetterAdvancements-Fabric-1.21.11-0.4.8.54.jar')
+    if (baDevJar.exists()) {
+        modRuntimeOnly files(baDevJar)
+    }
+}
+
+processResources {
+    // 只对 fabric.mod.json 做占位符展开；进度 JSON 里 ${...} 不会被误伤。
+    //
+    // ⚠ 转义陷阱（已实机验证）：expand() 底层是 Groovy 的 SimpleTemplateEngine，
+    // 它把模板文本按 GString 处理，于是 JSON 字符串里的 \n 会被 Groovy 词法器解释掉，
+    // 产物里变成真正的换行符（非法 JSON）。所以 fabric.mod.json 的 description
+    // 必须写成 \\n —— 构建后正好还原为合法的 \n 转义。改这行之前先看 dist/ 里的产物。
+    inputs.property 'version', project.version
+    filesMatching('fabric.mod.json') {
+        expand version: project.version
+    }
+
+}
+
+// ── 测试数据（命名空间 katest，rev17 起改为按需挂载）────────────────────────
+// rev14 三项渲染功能（字符串图标 / background mode+attachment / multi_parents 多上游
+// 连线）的实机验收用例，共 14 个进度 + 2 张纹理。它们**不是模组内容**，默认不进 jar。
+//
+// 存放位置 src/testdata/katest/，与 src/main/resources 同构（data/ + assets/），
+// 所以挂上去之后 jar 里的条目路径与 rev16 及以前完全一致：
+//     gradlew build -PwithTestData   → 产物内含 katest，可实机验收
+//     gradlew build                  → 交付物，零测试内容
+// 需要时还可以两者并存（先生成测试 jar，再出正式 jar，编号各 +1）。
+//
+// srcDirs 本身就是 processResources 的输入指纹，所以来回切换会自动重跑，
+// 不需要再声明 inputs.property（旧的 -PnoTestData exclude 方案必须声明，已废弃）。
+if (project.hasProperty('withTestData')) {
+    logger.lifecycle("含测试数据构建：src/testdata/katest 已挂为额外资源目录（+14 进度 +2 纹理）")
+    sourceSets.main.resources.srcDir 'src/testdata/katest'
+}
+
+java {
+    withSourcesJar()
+    // toolchain 声明目标 Java 版本：环境 JDK 低于目标时由 foojay 自动 provision。
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(javaVersion)
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.release = javaVersion
+}
+
+// 说明：本项目是"几乎纯数据包"的模组——进度、标签、文本、纹理全在
+// src/main/resources/{data,assets} 下，Java 只提供 3 个自定义进度触发器。

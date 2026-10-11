@@ -1,0 +1,51 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "keepadvancing:config",
+      "option": "load_builtin_content"
+    }
+  ],
+  "parent": "keepadvancing:vanilla/what_is_it",
+  "criteria": {
+    "is_it_a_girl": {
+      "conditions": {
+        "item": {
+          "items": "minecraft:spyglass"
+        },
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type_specific": {
+                "looking_at": {
+                  "type": "minecraft:piglin"
+                },
+                "type": "minecraft:player"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:using_item"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.keepadvancing.vanilla.is_it_a_girl.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "minecraft:spyglass"
+    },
+    "title": {
+      "translate": "advancements.keepadvancing.vanilla.is_it_a_girl.title"
+    }
+  },
+  "requirements": [
+    [
+      "is_it_a_girl"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

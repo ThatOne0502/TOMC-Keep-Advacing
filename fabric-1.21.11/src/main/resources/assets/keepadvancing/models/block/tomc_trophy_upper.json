@@ -1,0 +1,6 @@
+{
+ "credit": "tomc_trophy_upper - no geometry: the whole trophy is drawn by the lower half, this model only exists so that breaking the upper half spawns gold particles instead of the black-and-purple missing-texture ones (minecraft:block/air declares particle = minecraft:missingno)",
+ "textures": {
+  "particle": "block/gold_block"
+ }
+}

@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "keepadvancing",
+  "version": "${version}",
+  "name": "TOMC-Keep Advancing",
+  "description": "Keep Advancing adds new advancements for Vanilla and some other mods from TOMC.\\n\\nDevelopment assisted by DeepSeek Harness(deepseek-flash).",
+  "authors": ["ThatOne"],
+  "contact": {},
+  "license": "LGPL-3.0-or-later",
+  "icon": "assets/keepadvancing/icon.png",
+  "environment": "*",
+  "mixins": [
+    "mixins.keepadvancing.json",
+    "mixins.keepadvancing.ba.json"
+  ],
+  "entrypoints": {
+    "main": ["io.github.thatone0502.keepadvancing.KeepAdvancing"],
+    "client": ["io.github.thatone0502.keepadvancing.KeepAdvancingClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.3",
+    "minecraft": "~1.21.11",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}

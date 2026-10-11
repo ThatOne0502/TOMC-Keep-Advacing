@@ -1,0 +1,46 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "keepadvancing:config",
+      "option": "load_builtin_content"
+    }
+  ],
+  "parent": "keepadvancing:vanilla/raid",
+  "criteria": {
+    "desert_pyramid": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": "minecraft:desert_pyramid"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.keepadvancing.vanilla.egyptian_wisdom.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:chiseled_sandstone"
+    },
+    "title": {
+      "translate": "advancements.keepadvancing.vanilla.egyptian_wisdom.title"
+    }
+  },
+  "requirements": [
+    [
+      "desert_pyramid"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:dragon_egg",
+      "count": 1
+    },
+    "title": {
+      "text": "⑤ 三父 · W (三父汇合)"
+    },
+    "description": {
+      "text": "主父 = Y，multi_parents = [Z, X] -> W 上应有三条上游连线：Y 与 Z 各一条邻层短线，X 一条跨层长线"
+    },
+    "frame": "challenge",
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "criteria": {
+    "manual": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "katest:converge/y",
+  "multi_parents": [
+    "katest:converge/z",
+    "katest:converge/x"
+  ]
+}

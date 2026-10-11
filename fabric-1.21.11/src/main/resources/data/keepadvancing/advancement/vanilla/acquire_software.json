@@ -1,0 +1,39 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "keepadvancing:config",
+      "option": "load_builtin_content"
+    }
+  ],
+  "parent": "minecraft:story/smelt_iron",
+  "criteria": {
+    "acquire_software": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:gold_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.keepadvancing.vanilla.acquire_software.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "minecraft:gold_ingot"
+    },
+    "title": {
+      "translate": "advancements.keepadvancing.vanilla.acquire_software.title"
+    }
+  },
+  "requirements": [
+    [
+      "acquire_software"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

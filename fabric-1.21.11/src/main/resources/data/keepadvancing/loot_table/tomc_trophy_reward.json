@@ -1,0 +1,40 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "keepadvancing:config",
+      "option": "load_builtin_content"
+    }
+  ],
+  "type": "minecraft:advancement_reward",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "keepadvancing:tomc_trophy",
+          "count": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "mode": "replace_all",
+              "lore": [
+                {
+                  "translate": "keepadvancing.message.completion_letter",
+                  "with": [
+                    {
+                      "selector": "@s"
+                    }
+                  ],
+                  "color": "gold",
+                  "italic": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

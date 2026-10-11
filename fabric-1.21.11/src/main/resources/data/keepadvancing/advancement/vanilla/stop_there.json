@@ -1,0 +1,52 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "keepadvancing:config",
+      "option": "load_builtin_content"
+    }
+  ],
+  "parent": "keepadvancing:vanilla/is_it_a_terminal",
+  "criteria": {
+    "stop_there": {
+      "conditions": {
+        "item": {
+          "items": "minecraft:spyglass"
+        },
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type_specific": {
+                "looking_at": {
+                  "type": "minecraft:shulker_bullet"
+                },
+                "type": "minecraft:player"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:using_item"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.keepadvancing.vanilla.stop_there.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:spyglass"
+    },
+    "title": {
+      "translate": "advancements.keepadvancing.vanilla.stop_there.title"
+    }
+  },
+  "requirements": [
+    [
+      "stop_there"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

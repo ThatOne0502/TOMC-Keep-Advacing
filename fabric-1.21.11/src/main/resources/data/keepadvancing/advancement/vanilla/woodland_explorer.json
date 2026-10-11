@@ -1,0 +1,49 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "keepadvancing:config",
+      "option": "load_builtin_content"
+    }
+  ],
+  "parent": "keepadvancing:vanilla/mayan_wisdom",
+  "criteria": {
+    "mansion": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": "minecraft:mansion"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.keepadvancing.vanilla.woodland_explorer.description"
+    },
+    "frame": "challenge",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:dark_oak_log"
+    },
+    "title": {
+      "translate": "advancements.keepadvancing.vanilla.woodland_explorer.title"
+    }
+  },
+  "requirements": [
+    [
+      "mansion"
+    ]
+  ],
+  "rewards": {
+    "experience": 500
+  },
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,56 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "keepadvancing:config",
+      "option": "load_builtin_content"
+    }
+  ],
+  "parent": "minecraft:adventure/kill_a_mob",
+  "criteria": {
+    "plant_vs_undead": {
+      "conditions": {
+        "damage": {
+          "type": {
+            "direct_entity": {
+              "type": "minecraft:player",
+              "equipment": {
+                "mainhand": {
+                  "items": "#keepadvancing:plants"
+                }
+              }
+            }
+          }
+        },
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "#minecraft:undead"
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:player_hurt_entity"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.keepadvancing.vanilla.plants_vs_zombies.description"
+    },
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "minecraft:poppy"
+    },
+    "title": {
+      "translate": "advancements.keepadvancing.vanilla.plants_vs_zombies.title"
+    }
+  },
+  "requirements": [
+    [
+      "plant_vs_undead"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

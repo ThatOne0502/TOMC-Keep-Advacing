@@ -1,0 +1,21 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "io.github.thatone0502.keepadvancing.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "DisplayInfoMixin",
+    "AdvancementMixin",
+    "AdvancementNodeMixin",
+    "AdvancementTreeMixin",
+    "ServerAdvancementManagerMixin",
+    "AdvancementVisibilityEvaluatorMixin"
+  ],
+  "client": [
+    "client.AdvancementTabMixin",
+    "client.AdvancementTabTypeMixin",
+    "client.AdvancementWidgetMixin",
+    "client.AdvancementToastMixin"
+  ],
+  "injectors": { "defaultRequire": 1 }
+}

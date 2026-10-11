@@ -1,0 +1,42 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "keepadvancing:config",
+      "option": "load_builtin_content"
+    }
+  ],
+  "parent": "minecraft:husbandry/obtain_netherite_hoe",
+  "criteria": {
+    "broke_netherite_hoe": {
+      "conditions": {
+        "durability": 0,
+        "item": {
+          "items": "minecraft:netherite_hoe"
+        }
+      },
+      "trigger": "minecraft:item_durability_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.keepadvancing.vanilla.serious_dedication_again.description"
+    },
+    "frame": "challenge",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:netherite_hoe"
+    },
+    "title": {
+      "translate": "advancements.keepadvancing.vanilla.serious_dedication_again.title"
+    }
+  },
+  "requirements": [
+    [
+      "broke_netherite_hoe"
+    ]
+  ],
+  "rewards": {
+    "experience": 500
+  },
+  "sends_telemetry_event": true
+}

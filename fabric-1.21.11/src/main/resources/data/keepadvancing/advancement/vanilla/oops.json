@@ -1,0 +1,57 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "keepadvancing:config",
+      "option": "load_builtin_content"
+    }
+  ],
+  "parent": "minecraft:end/elytra",
+  "criteria": {
+    "elytra_damaged_431": {
+      "conditions": {
+        "items": [
+          {
+            "components": {
+              "minecraft:damage": 431
+            },
+            "items": "minecraft:elytra"
+          }
+        ],
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "flags": {
+                "is_fall_flying": true
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.keepadvancing.vanilla.oops.description"
+    },
+    "frame": "challenge",
+    "icon": {
+      "components": {
+        "minecraft:damage": 431
+      },
+      "count": 1,
+      "id": "minecraft:elytra"
+    },
+    "title": {
+      "translate": "advancements.keepadvancing.vanilla.oops.title"
+    }
+  },
+  "requirements": [
+    [
+      "elytra_damaged_431"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

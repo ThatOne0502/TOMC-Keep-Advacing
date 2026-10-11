@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:iron_ingot",
+      "count": 1
+    },
+    "title": {
+      "text": "⑤ 三父 · Z"
+    },
+    "description": {
+      "text": "X 的右子，是 W 的额外父（与 Y 平级）"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "criteria": {
+    "manual": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "katest:converge/x"
+}

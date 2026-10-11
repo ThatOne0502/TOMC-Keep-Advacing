@@ -1,0 +1,44 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "keepadvancing:config",
+      "option": "load_builtin_content"
+    }
+  ],
+  "parent": "minecraft:adventure/kill_a_mob",
+  "criteria": {
+    "dolphin": {
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:dolphin"
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:player_hurt_entity"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.keepadvancing.vanilla.you_monster.description"
+    },
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "minecraft:iron_sword"
+    },
+    "title": {
+      "translate": "advancements.keepadvancing.vanilla.you_monster.title"
+    }
+  },
+  "requirements": [
+    [
+      "dolphin"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

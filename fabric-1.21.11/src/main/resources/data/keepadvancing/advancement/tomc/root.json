@@ -1,0 +1,35 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "keepadvancing:config",
+      "option": "load_builtin_content"
+    }
+  ],
+  "criteria": {
+    "requirement": {
+      "trigger": "keepadvancing:mod_loaded",
+      "conditions": {
+        "package": {"regex": "io\\.github\\.thatone0502"}
+      }
+    }
+  },
+  "display": {
+    "background": "keepadvancing:gui/advancements/backgrounds/tomc",
+    "description": {
+      "translate": "advancements.keepadvancing.tomc.root.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "keepadvancing:tomc_trophy"
+    },
+    "title": {
+      "translate": "advancements.keepadvancing.tomc.root.title"
+    }
+  },
+  "requirements": [
+    [
+      "requirement"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

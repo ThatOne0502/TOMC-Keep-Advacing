@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:globe_banner_pattern",
+      "count": 1
+    },
+    "title": {
+      "text": "② background.mode=contain"
+    },
+    "description": {
+      "text": "等比缩放至完整可见，可能留黑边（能看全外框）"
+    },
+    "frame": "goal",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "background": {
+      "asset_id": "katest:gui/backgrounds/grid",
+      "mode": "contain"
+    }
+  },
+  "criteria": {
+    "manual": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "advancements.keepadvancing.tomc.root.title": "欢迎来到“TOMC”",
+  "advancements.keepadvancing.tomc.root.description": "你的“我的世界传奇”就此展开。",
+
+  "block.keepadvancing.tomc_trophy": "TOMC奖杯",
+
+  "keepadvancing.message.completion_letter": "亲爱的%s：\n恭喜你完成了 TOMC 的全部内置进度。\n谢谢你游玩我的模组，也谢谢你走进 ThatOne's Minecraft。\n你已经在 TOMC 里，写下了属于你的 TOMC。\n因为 TOMC 不只是 ThatOne 的《我的世界》，\n也是你的 Tales of Minecraft。\n故事未完，由你续写。\n—— ThatOne",
+
+  "tag.item.keepadvancing.plants": "植物",
+
+  "advancements.keepadvancing.vanilla.sticky_keys.title": "粘滞键",
+  "advancements.keepadvancing.vanilla.sticky_keys.description": "是否要打开粘滞键？",
+
+  "advancements.keepadvancing.vanilla.acquire_software.title": "来软的",
+  "advancements.keepadvancing.vanilla.acquire_software.description": "冶炼出一块金锭",
+
+  "advancements.keepadvancing.vanilla.serious_dedication_again.title": "终极奉献…再一次…",
+  "advancements.keepadvancing.vanilla.serious_dedication_again.description": "用坏一把下界合金锄，然后重新考虑你的人生抉择",
+
+  "advancements.keepadvancing.vanilla.oops.title": "哦吼",
+  "advancements.keepadvancing.vanilla.oops.description": "好吧，那么问题来了……",
+
+  "advancements.keepadvancing.vanilla.spaceman.title": "我要当太空人",
+  "advancements.keepadvancing.vanilla.spaceman.description": "抵达卡门线",
+
+  "advancements.keepadvancing.vanilla.you_monster.title": "你个怪物！",
+  "advancements.keepadvancing.vanilla.you_monster.description": "别杀海豚",
+
+  "advancements.keepadvancing.vanilla.plants_vs_zombies.title": "植物大战僵尸",
+  "advancements.keepadvancing.vanilla.plants_vs_zombies.description": "用植物攻击一个亡灵生物",
+
+  "advancements.keepadvancing.vanilla.overpowered.title": "君临天下",
+  "advancements.keepadvancing.vanilla.overpowered.description": "吃掉一个附魔金苹果",
+
+  "advancements.keepadvancing.vanilla.what_is_it.title": "那是什么？",
+  "advancements.keepadvancing.vanilla.what_is_it.description": "透过望远镜观察",
+
+  "advancements.keepadvancing.vanilla.is_it_a_lead.title": "那是拴绳吗？",
+  "advancements.keepadvancing.vanilla.is_it_a_lead.description": "透过望远镜观察流浪商人",
+
+  "advancements.keepadvancing.vanilla.holy_creep.title": "太炸裂了",
+  "advancements.keepadvancing.vanilla.holy_creep.description": "透过望远镜观察苦力怕",
+
+  "advancements.keepadvancing.vanilla.is_it_a_girl.title": "那是妹子吗？",
+  "advancements.keepadvancing.vanilla.is_it_a_girl.description": "透过望远镜观察猪灵",
+
+  "advancements.keepadvancing.vanilla.turn_it_back.title": "那是要见鬼吗？",
+  "advancements.keepadvancing.vanilla.turn_it_back.description": "透过望远镜观察火球",
+
+  "advancements.keepadvancing.vanilla.is_it_a_terminal.title": "那是航站楼吗？",
+  "advancements.keepadvancing.vanilla.is_it_a_terminal.description": "透过望远镜观察末地水晶",
+
+  "advancements.keepadvancing.vanilla.stop_there.title": "你不要过来啊~",
+  "advancements.keepadvancing.vanilla.stop_there.description": "透过望远镜观察潜影弹",
+
+  "advancements.keepadvancing.vanilla.raid.title": "劫掠",
+  "advancements.keepadvancing.vanilla.raid.description": "“劫掠”指的是你，热衷于洗劫村庄的你",
+
+  "advancements.keepadvancing.vanilla.egyptian_wisdom.title": "古埃及的智慧",
+  "advancements.keepadvancing.vanilla.egyptian_wisdom.description": "在沙尘覆盖的神殿地板上，你看穿了破绽——那纹路整齐得可疑！你挖开蓝色陶土，勇敢跃入黑暗。下方四只宝箱幽幽闪光。你朝其中一只迈出一步，就在听到“咔哒”的一声时，脚下的地板已在TNT与沙尘中炸开了。",
+
+  "advancements.keepadvancing.vanilla.mayan_wisdom.title": "古玛雅的智慧",
+  "advancements.keepadvancing.vanilla.mayan_wisdom.description": "你在藤蔓遍布的走廊里窥探到了奖品——一个宝箱！你朝它迈出一步，就在听到“咔哒”的一声时，箭矢已经扑面而来了。\n——Duncan Geere，2018",
+
+  "advancements.keepadvancing.vanilla.woodland_explorer.title": "林地探险家",
+  "advancements.keepadvancing.vanilla.woodland_explorer.description": "在那个阴冷、幽寂的府邸里，灾厄村民在干些什么？那里有着红石监狱、精心制作的祭坛和包含奇怪的黑曜石结构的隐藏房间——它们好像真的在密谋着什么。\n——Marsh Davies，2017",
+
+  "advancements.keepadvancing.vanilla.ocean_explorer.title": "海洋探险家",
+  "advancements.keepadvancing.vanilla.ocean_explorer.description": "潜入海洋深处，你可能会在浑浊的海水中发现有东西闪着微弱的亮光：是气派的金字塔建筑。虽不知是何人修建，但仍然可见游弋于此的守卫者——一种独眼的球状海兽。\n——Marsh Davies，2016",
+
+  "advancements.keepadvancing.vanilla.ascended.title": "你已飞升",
+  "advancements.keepadvancing.vanilla.ascended.description": "30秒内消耗10个不死图腾",
+
+  "advancements.keepadvancing.vanilla.the_far_lands.title": "边境之地",
+  "advancements.keepadvancing.vanilla.the_far_lands.description": "大自然令生活保持有趣的方式\n——Ivor\n（来自《Minecraft: Story Mode》）"
+}

@@ -1,0 +1,39 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "keepadvancing:config",
+      "option": "load_builtin_content"
+    }
+  ],
+  "parent": "minecraft:adventure/root",
+  "criteria": {
+    "sticky_keys": {
+      "trigger": "keepadvancing:timer_test",
+      "conditions": {
+        "source": "keepadvancing:sneak_press",
+        "check": "increase_count",
+        "operator": ">=",
+        "threshold": 5,
+        "window": 20
+      }
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.keepadvancing.vanilla.sticky_keys.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "minecraft:slime_ball"
+    },
+    "title": {
+      "translate": "advancements.keepadvancing.vanilla.sticky_keys.title"
+    }
+  },
+  "requirements": [
+    [
+      "sticky_keys"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

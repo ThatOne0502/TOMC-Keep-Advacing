@@ -1,0 +1,51 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "keepadvancing:config",
+      "option": "load_builtin_content"
+    }
+  ],
+  "parent": "keepadvancing:vanilla/is_it_a_lead",
+  "criteria": {
+    "holy_creep": {
+      "conditions": {
+        "item": {
+          "items": "minecraft:spyglass"
+        },
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type_specific": {
+                "looking_at": {
+                  "type": "minecraft:creeper"
+                },
+                "type": "minecraft:player"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:using_item"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.keepadvancing.vanilla.holy_creep.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "minecraft:spyglass"
+    },
+    "title": {
+      "translate": "advancements.keepadvancing.vanilla.holy_creep.title"
+    }
+  },
+  "requirements": [
+    [
+      "holy_creep"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

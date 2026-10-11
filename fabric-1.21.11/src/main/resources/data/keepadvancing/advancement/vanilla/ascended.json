@@ -1,0 +1,44 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "keepadvancing:config",
+      "option": "load_builtin_content"
+    }
+  ],
+  "parent": "minecraft:adventure/totem_of_undying",
+  "criteria": {
+    "ascended": {
+      "trigger": "keepadvancing:timer_test",
+      "conditions": {
+        "source": "minecraft.used:minecraft.totem_of_undying",
+        "check": "increase_count",
+        "operator": ">=",
+        "threshold": 10,
+        "window": 600
+      }
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.keepadvancing.vanilla.ascended.description"
+    },
+    "frame": "challenge",
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "minecraft:totem_of_undying"
+    },
+    "title": {
+      "translate": "advancements.keepadvancing.vanilla.ascended.title"
+    }
+  },
+  "requirements": [
+    [
+      "ascended"
+    ]
+  ],
+  "rewards": {
+    "experience": 12000
+  },
+  "sends_telemetry_event": true
+}

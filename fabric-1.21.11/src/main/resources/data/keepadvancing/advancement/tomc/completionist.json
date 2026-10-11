@@ -1,0 +1,36 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "keepadvancing:config",
+      "option": "load_builtin_content"
+    }
+  ],
+  "criteria": {
+    "requirement": {
+      "trigger": "keepadvancing:advancements_made",
+      "conditions": {
+        "list": [
+          {
+            "after": "keepadvancing:tomc/root"
+          }
+        ],
+        "require": {
+          "type": "proportion",
+          "operator": ">=",
+          "value": 1.0
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "requirement"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "keepadvancing:tomc_trophy_reward"
+    ],
+    "function": "keepadvancing:completion_letter"
+  }
+}

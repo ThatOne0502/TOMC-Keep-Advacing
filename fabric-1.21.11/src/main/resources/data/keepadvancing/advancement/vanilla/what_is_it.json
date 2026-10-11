@@ -1,0 +1,49 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "keepadvancing:config",
+      "option": "load_builtin_content"
+    }
+  ],
+  "parent": "minecraft:adventure/root",
+  "criteria": {
+    "what_is_it": {
+      "conditions": {
+        "item": {
+          "items": "minecraft:spyglass"
+        },
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type_specific": {
+                "looking_at": {},
+                "type": "minecraft:player"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:using_item"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.keepadvancing.vanilla.what_is_it.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "minecraft:spyglass"
+    },
+    "title": {
+      "translate": "advancements.keepadvancing.vanilla.what_is_it.title"
+    }
+  },
+  "requirements": [
+    [
+      "what_is_it"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

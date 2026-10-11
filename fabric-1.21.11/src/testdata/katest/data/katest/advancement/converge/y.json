@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:gold_ingot",
+      "count": 1
+    },
+    "title": {
+      "text": "⑤ 三父 · Y"
+    },
+    "description": {
+      "text": "X 的左子，也是 W 的主父"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "criteria": {
+    "manual": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "katest:converge/x"
+}

@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:diamond",
+      "count": 1
+    },
+    "title": {
+      "text": "④ DAG · A (root)"
+    },
+    "description": {
+      "text": "菱形的顶点"
+    },
+    "frame": "goal",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "background": "katest:gui/backgrounds/grid"
+  },
+  "criteria": {
+    "manual": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

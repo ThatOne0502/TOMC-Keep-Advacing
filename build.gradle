@@ -1,0 +1,24 @@
+// TOMC-Keep Advancing — 多加载器 / 多版本构建根配置
+//
+// 结构约定：
+//   根目录                —— 全局构建配置、共享版本钉选、PLAN.md
+//   fabric-1.21.11/       —— Fabric × MC 1.21.11（当前唯一目标，见 PLAN.md §8）
+//
+// 后续按 PLAN.md §2 的路线追加 fabric-1.21.1 / neoforge-1.21.11 / forge-1.21.1 子项目。
+// 每个子项目自带 gradlew 与 settings.gradle，便于单独构建与单独交付。
+
+def props = new Properties()
+file('root.gradle.properties').withInputStream { props.load(it) }
+
+allprojects {
+    group = props.getProperty('group')
+    version = props.getProperty('mod_version')
+}
+
+tasks.register('showVersions') {
+    group = 'help'
+    description = '打印共享版本钉选（用于核对 PLAN.md §2.1）'
+    doLast {
+        props.each { k, v -> println "${k} = ${v}" }
+    }
+}

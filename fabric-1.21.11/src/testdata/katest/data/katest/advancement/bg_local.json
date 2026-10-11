@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:compass",
+      "count": 1
+    },
+    "title": {
+      "text": "③ background.attachment=local"
+    },
+    "description": {
+      "text": "背景跟随内容滚动；绘制区 = max(视口, 内容累计) x max(视口, 内容累计)。拖动/滚轮时应看到背景跟着内容走，而不是钉在视口上。"
+    },
+    "frame": "goal",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "background": {
+      "asset_id": "katest:gui/backgrounds/grid",
+      "mode": "cover",
+      "attachment": "local"
+    }
+  },
+  "criteria": {
+    "manual": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

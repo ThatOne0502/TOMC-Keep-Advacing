@@ -1,0 +1,76 @@
+{
+  "advancements.keepadvancing.tomc.root.title": "Welcome to TOMC",
+  "advancements.keepadvancing.tomc.root.description": "Your Tales of Minecraft starts here.",
+
+  "block.keepadvancing.tomc_trophy": "TOMC Trophy",
+
+  "keepadvancing.message.completion_letter": "Dear %s\nCongratulations — you've completed every built-in advancement in TOMC.\nThank you for playing my mod, and for stepping into ThatOne's Minecraft.\nYou've written your own TOMC.\nBecause TOMC is not just ThatOne's Minecraft —\nit's your Tales of Minecraft.\nThe story isn't over. It's yours to continue.\n— ThatOne",
+
+  "tag.item.keepadvancing.plants": "Plants",
+
+  "advancements.keepadvancing.vanilla.sticky_keys.title": "Sticky Keys",
+  "advancements.keepadvancing.vanilla.sticky_keys.description": "Do you want to turn on Sticky Keys?",
+
+  "advancements.keepadvancing.vanilla.acquire_software.title": "Acquire Software",
+  "advancements.keepadvancing.vanilla.acquire_software.description": "Smelt a Gold Ingot",
+
+  "advancements.keepadvancing.vanilla.serious_dedication_again.title": "Serious Dedication... Again...",
+  "advancements.keepadvancing.vanilla.serious_dedication_again.description": "Use a Netherite Hoe until it breaks, and then reevaluate your life choices again",
+
+  "advancements.keepadvancing.vanilla.oops.title": "Oops",
+  "advancements.keepadvancing.vanilla.oops.description": "Well, then there is the problem...",
+
+  "advancements.keepadvancing.vanilla.spaceman.title": "Spaceman",
+  "advancements.keepadvancing.vanilla.spaceman.description": "Reach the Kármán line.",
+
+  "advancements.keepadvancing.vanilla.you_monster.title": "You Monster!",
+  "advancements.keepadvancing.vanilla.you_monster.description": "Don't kill dolphins",
+
+  "advancements.keepadvancing.vanilla.plants_vs_zombies.title": "Plants vs. Zombies",
+  "advancements.keepadvancing.vanilla.plants_vs_zombies.description": "Hit an undead mob with a plant",
+
+  "advancements.keepadvancing.vanilla.overpowered.title": "Overpowered",
+  "advancements.keepadvancing.vanilla.overpowered.description": "Eat an enchanted apple",
+
+  "advancements.keepadvancing.vanilla.what_is_it.title": "What Is It?",
+  "advancements.keepadvancing.vanilla.what_is_it.description": "Look at something through a Spyglass",
+
+  "advancements.keepadvancing.vanilla.is_it_a_lead.title": "Is It a Lead?",
+  "advancements.keepadvancing.vanilla.is_it_a_lead.description": "Look at the Wandering Trader through a Spyglass",
+
+  "advancements.keepadvancing.vanilla.holy_creep.title": "Holy Creep",
+  "advancements.keepadvancing.vanilla.holy_creep.description": "Look at the Creeper through a Spyglass",
+
+  "advancements.keepadvancing.vanilla.is_it_a_girl.title": "Is It a Girl?",
+  "advancements.keepadvancing.vanilla.is_it_a_girl.description": "Look at the Piglin through a Spyglass",
+
+  "advancements.keepadvancing.vanilla.turn_it_back.title": "Turn It back!",
+  "advancements.keepadvancing.vanilla.turn_it_back.description": "Look at the Fireball through a Spyglass",
+
+  "advancements.keepadvancing.vanilla.is_it_a_terminal.title": "Is It a Terminal?",
+  "advancements.keepadvancing.vanilla.is_it_a_terminal.description": "Look at the End Crystal through a Spyglass",
+
+  "advancements.keepadvancing.vanilla.stop_there.title": "Stop There!",
+  "advancements.keepadvancing.vanilla.stop_there.description": "Look at the Shulker Bullet through a Spyglass",
+
+  "advancements.keepadvancing.vanilla.raid.title": "Raid",
+  "advancements.keepadvancing.vanilla.raid.description": "\"Raid\" here means you, who's passionate about looting villages",
+
+  "advancements.keepadvancing.vanilla.egyptian_wisdom.title": "Egyptian Wisdom",
+  "advancements.keepadvancing.vanilla.egyptian_wisdom.description": "Down a sand-dusted temple floor you spot the tell – a pattern too neat! You break the blue terracotta and leap bravely into the dark. Four chests glint below. You take a step towards one, and the last thing you hear is a “click” before the floor erupts in TNT and sand.",
+
+  "advancements.keepadvancing.vanilla.mayan_wisdom.title": "Mayan Wisdom",
+  "advancements.keepadvancing.vanilla.mayan_wisdom.description": "Down a vine-strewn corridor you spy your prize – a chest! You take a step towards it, and the last thing you hear is a “click” before you get a faceful of arrows.\n - Duncan Geere, 2018",
+
+  "advancements.keepadvancing.vanilla.woodland_explorer.title": "Woodland Explorer",
+  "advancements.keepadvancing.vanilla.woodland_explorer.description": "What are the Illagers doing in that dank, secluded mansion of theirs? With its redstone jails, elaborate altars and hidden rooms housing strange obsidian structures - it really seems like they are plotting something.\n- Marsh Davies, 2017",
+
+  "advancements.keepadvancing.vanilla.ocean_explorer.title": "Ocean Explorer",
+  "advancements.keepadvancing.vanilla.ocean_explorer.description": "Dive into the deep blue and you may see them shimmering through the hazy water: sprawling pyramidal structures built by unknown hands, but still patrolled by spiny Guardians - spheroid, cyclopean fish-beasts.\n- Marsh Davies, 2016",
+
+  "advancements.keepadvancing.vanilla.ascended.title": "Ascended",
+  "advancements.keepadvancing.vanilla.ascended.description": "Use 10 Totems of Undying within 30 seconds.",
+
+  "advancements.keepadvancing.vanilla.the_far_lands.title": "The Far Lands",
+  "advancements.keepadvancing.vanilla.the_far_lands.description": "Nature's way of keeping life interesting.\n- Ivor (from Minecraft: Story Mode)"
+}

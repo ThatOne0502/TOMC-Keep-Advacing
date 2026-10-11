@@ -1,0 +1,45 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "keepadvancing:config",
+      "option": "load_builtin_content"
+    }
+  ],
+  "parent": "minecraft:adventure/sleep_in_bed",
+  "criteria": {
+    "in_village": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": "#minecraft:village"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.keepadvancing.vanilla.raid.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "minecraft:hay_block"
+    },
+    "title": {
+      "translate": "advancements.keepadvancing.vanilla.raid.title"
+    }
+  },
+  "requirements": [
+    [
+      "in_village"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

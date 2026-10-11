@@ -1,0 +1,121 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "keepadvancing:config",
+      "option": "load_builtin_content"
+    }
+  ],
+  "parent": "minecraft:adventure/adventuring_time",
+  "criteria": {
+    "far_lands_x_pos": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "position": {
+                  "x": {
+                    "min": 29999950
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    },
+    "far_lands_x_neg": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "position": {
+                  "x": {
+                    "max": -29999950
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    },
+    "far_lands_z_pos": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "position": {
+                  "z": {
+                    "min": 29999950
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    },
+    "far_lands_z_neg": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "position": {
+                  "z": {
+                    "max": -29999950
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.keepadvancing.vanilla.the_far_lands.description"
+    },
+    "frame": "challenge",
+    "icon": {
+      "components": {
+        "minecraft:enchantments": {
+          "minecraft:unbreaking": 1
+        }
+      },
+      "count": 1,
+      "id": "minecraft:diamond_boots"
+    },
+    "title": {
+      "translate": "advancements.keepadvancing.vanilla.the_far_lands.title"
+    }
+  },
+  "requirements": [
+    [
+      "far_lands_x_pos",
+      "far_lands_x_neg",
+      "far_lands_z_pos",
+      "far_lands_z_neg"
+    ]
+  ],
+  "rewards": {
+    "experience": 12000
+  },
+  "sends_telemetry_event": true
+}

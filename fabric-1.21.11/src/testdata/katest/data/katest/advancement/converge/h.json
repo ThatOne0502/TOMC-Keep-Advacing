@@ -1,0 +1,24 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:barrier",
+      "count": 1
+    },
+    "title": {
+      "text": "⑤ 三父 · H (hidden)"
+    },
+    "description": {
+      "text": "hidden=true 的节点，用来跑 AdvancementVisibilityEvaluator 的规则栈"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "manual": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "katest:converge/y"
+}

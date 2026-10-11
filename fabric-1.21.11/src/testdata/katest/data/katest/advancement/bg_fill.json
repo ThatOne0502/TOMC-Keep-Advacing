@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:globe_banner_pattern",
+      "count": 1
+    },
+    "title": {
+      "text": "② background.mode=fill"
+    },
+    "description": {
+      "text": "非等比拉伸铺满整区（64x48 会被拉成 234x113 的比例，图像变形）"
+    },
+    "frame": "goal",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "background": {
+      "asset_id": "katest:gui/backgrounds/grid",
+      "mode": "fill"
+    }
+  },
+  "criteria": {
+    "manual": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

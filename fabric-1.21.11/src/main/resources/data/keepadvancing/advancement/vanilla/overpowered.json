@@ -1,0 +1,38 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "keepadvancing:config",
+      "option": "load_builtin_content"
+    }
+  ],
+  "parent": "minecraft:husbandry/root",
+  "criteria": {
+    "enchanted_golden_apple": {
+      "conditions": {
+        "item": {
+          "items": "minecraft:enchanted_golden_apple"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.keepadvancing.vanilla.overpowered.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:enchanted_golden_apple"
+    },
+    "title": {
+      "translate": "advancements.keepadvancing.vanilla.overpowered.title"
+    }
+  },
+  "requirements": [
+    [
+      "enchanted_golden_apple"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
